@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features version="1">
+    <feature name="not implemented"
+             path="features/not_implemented.feature" tag="">
+        <file><![CDATA[Feature: not implemented
+
+    Scenario: this scenario is not implemented
+        Given steps are not implemented
+        When i should fail
+        Then this should be skipped]]></file>
+        <scenarios>
+            <scenario name="this scenario is not implemented">
+                <steps>
+                    <step
+                        name="Given steps are not implemented" status="passed"/>
+                    <step name="When i should fail" status="pending">
+                        <error_message><![CDATA[step not implemented]]></error_message>
+                    </step>
+                    <step
+                        name="Then this should be skipped" status="skipped"/>
+                </steps>
+            </scenario>
+        </scenarios>
+    </feature>
+</features>

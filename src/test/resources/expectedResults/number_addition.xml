@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features version="1">
+    <feature name="addition" path="features/number_addition.feature"
+             tag="">
+        <file><![CDATA[@TAG_FEATURE
+Feature: addition
+
+    Background:
+        Given i know math
+        Then i can calculate
+
+    Scenario: add 111 and 222
+        Given a number with a value of 111
+        When we add 222 to the number
+        Then the number value should be 333
+
+
+    Scenario Outline: add <num1> and <num2>
+        Given a number with a value of <num1>
+        When we add <num2> to the number
+        Then the number value should be <result>
+
+        Examples:
+            | num1 | num2 | result |
+            | 500  | 600  | 1100   |
+            | 4    | 5    | 9      |]]></file>
+        <scenarios>
+            <scenario name="add 111 and 222">
+                <steps>
+                    <step name="Given i know math" status="passed"/>
+                    <step name="Then i can calculate" status="passed"/>
+                    <step
+                        name="Given a number with a value of 111" status="passed"/>
+                    <step
+                        name="When we add 222 to the number" status="passed"/>
+                    <step
+                        name="Then the number value should be 333" status="passed"/>
+                </steps>
+            </scenario>
+            <scenario name="add 500 and 600" outlineIndex="1">
+                <steps>
+                    <step name="Given i know math" status="passed"/>
+                    <step name="Then i can calculate" status="passed"/>
+                    <step
+                        name="Given a number with a value of 500" status="passed"/>
+                    <step
+                        name="When we add 600 to the number" status="passed"/>
+                    <step
+                        name="Then the number value should be 1100" status="passed"/>
+                </steps>
+            </scenario>
+            <scenario name="add 4 and 5" outlineIndex="2">
+                <steps>
+                    <step name="Given i know math" status="passed"/>
+                    <step name="Then i can calculate" status="passed"/>
+                    <step
+                        name="Given a number with a value of 4" status="passed"/>
+                    <step
+                        name="When we add 5 to the number" status="passed"/>
+                    <step
+                        name="Then the number value should be 9" status="passed"/>
+                </steps>
+            </scenario>
+        </scenarios>
+    </feature>
+</features>

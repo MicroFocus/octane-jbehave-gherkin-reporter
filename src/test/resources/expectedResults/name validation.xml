@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features version="1">
+    <feature name="name validation"
+             path="features/name validation.feature" tag="">
+        <file><![CDATA[@TAG_FEATURE
+Feature: name validation
+
+    Scenario: My name is Mike
+        Given My name is Mike
+        When Someone calls me Mike
+        Then I should answer
+
+    Scenario: My name is Jack
+        Given My name is Jack
+        When Someone calls me Albert
+        Then I shouldn't answer]]></file>
+        <scenarios>
+            <scenario name="My name is Mike">
+                <steps>
+                    <step name="Given My name is Mike" status="passed"/>
+                    <step name="When Someone calls me Mike" status="passed"/>
+                    <step name="Then I should answer" status="passed"/>
+                </steps>
+            </scenario>
+            <scenario name="My name is Jack">
+                <steps>
+                    <step name="Given My name is Jack" status="passed"/>
+                    <step
+                        name="When Someone calls me Albert" status="passed"/>
+                    <step name="Then I shouldn't answer" status="passed"/>
+                </steps>
+            </scenario>
+        </scenarios>
+    </feature>
+</features>
