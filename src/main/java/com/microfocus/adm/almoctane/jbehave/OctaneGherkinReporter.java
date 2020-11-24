@@ -1,8 +1,5 @@
 package com.microfocus.adm.almoctane.jbehave;
 
-
-import com.microfocus.adm.almoctane.jbehave.infra.TestTracker;
-import com.microfocus.adm.almoctane.jbehave.infra.Constants;
 import org.jbehave.core.model.Scenario;
 import org.jbehave.core.model.Story;
 import org.jbehave.core.reporters.NullStoryReporter;
@@ -11,6 +8,12 @@ import org.jbehave.core.steps.StepCollector;
 import java.nio.file.Path;
 import java.util.Map;
 
+/**
+ * <p>
+ * Story reporter that outputs an Octane test result file as XML. It extends
+ * {@link org.jbehave.core.reporters.NullStoryReporter}
+ * </p>
+ */
 public class OctaneGherkinReporter extends NullStoryReporter {
     private final ThreadLocal<TestTracker> testTrackerHolder = new ThreadLocal<>();
     private final ClassLoader classLoader;
@@ -18,8 +21,9 @@ public class OctaneGherkinReporter extends NullStoryReporter {
 
     /**
      * Creates an {@code OctaneGherkinReporter} object.
+     *
      * @param classLoader your embedder class loader
-     * @param resultDir (optional) a path to write the reports to. If no path provided {@code OctaneGherkinReporter} will write the reports to {@code target/jbehave/octane/}
+     * @param resultDir   (optional) a path to write the reports to. If no path provided {@code OctaneGherkinReporter} will write the reports to {@code target/jbehave/octane/}
      * @throws Exception if the specified classLoader is null
      */
     public OctaneGherkinReporter(ClassLoader classLoader, Path resultDir) throws Exception {
@@ -62,7 +66,6 @@ public class OctaneGherkinReporter extends NullStoryReporter {
     public void successful(String step) {
         testTrackerHolder.get().addStepToCurrentScenario(step, Constants.PASSED);
     }
-
 
     @Override
     public void pending(String step) {

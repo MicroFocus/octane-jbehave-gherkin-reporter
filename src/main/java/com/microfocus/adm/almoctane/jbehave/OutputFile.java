@@ -1,4 +1,4 @@
-package com.microfocus.adm.almoctane.jbehave.infra;
+package com.microfocus.adm.almoctane.jbehave;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.bootstrap.DOMImplementationRegistry;
@@ -9,7 +9,7 @@ import org.w3c.dom.ls.LSSerializer;
 import java.io.OutputStream;
 import java.net.URL;
 
-public class OutputFile {
+class OutputFile {
   URL url;
 
   public OutputFile(URL url) {

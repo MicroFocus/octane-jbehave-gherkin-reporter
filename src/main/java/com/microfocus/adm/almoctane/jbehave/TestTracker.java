@@ -1,4 +1,4 @@
-package com.microfocus.adm.almoctane.jbehave.infra;
+package com.microfocus.adm.almoctane.jbehave;
 
 
 import org.jbehave.core.model.Scenario;
@@ -17,7 +17,7 @@ import java.nio.file.Paths;
 import java.time.Instant;
 import java.util.Map;
 
-public class TestTracker {
+class TestTracker {
     private final ClassLoader embedder;
     private JbFeatureElement currentFeature;
     private ScenarioElement currentScenario;

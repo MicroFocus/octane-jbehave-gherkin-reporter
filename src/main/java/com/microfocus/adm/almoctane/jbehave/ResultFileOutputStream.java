@@ -1,4 +1,4 @@
-package com.microfocus.adm.almoctane.jbehave.infra;
+package com.microfocus.adm.almoctane.jbehave;
 
 
 import java.io.*;

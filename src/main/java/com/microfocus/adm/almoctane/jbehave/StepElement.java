@@ -1,10 +1,10 @@
-package com.microfocus.adm.almoctane.jbehave.infra;
+package com.microfocus.adm.almoctane.jbehave;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 
-public class StepElement implements GherkinSerializer {
+class StepElement implements GherkinSerializer {
     private String name;
     private String status = "";
     private Long duration = 0L;

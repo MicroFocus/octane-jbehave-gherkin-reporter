@@ -1,4 +1,4 @@
-package com.microfocus.adm.almoctane.jbehave.infra;
+package com.microfocus.adm.almoctane.jbehave;
 
 import org.jbehave.core.model.Story;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-public class JbFeatureElement extends FeatureElement {
+class JbFeatureElement extends FeatureElement {
     private final ClassLoader embedder;
     private String fileName;
 

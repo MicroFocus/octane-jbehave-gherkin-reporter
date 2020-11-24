@@ -1,6 +1,6 @@
-package com.microfocus.adm.almoctane.jbehave.infra;
+package com.microfocus.adm.almoctane.jbehave;
 
-public class Constants {
+class Constants {
 	public static final String errorPrefix = "<OctaneJBehaveGherkinReporter Error> ";
 	public static final String XML_VERSION = "1";
 	public static final String TAG_ID1 = "TID";

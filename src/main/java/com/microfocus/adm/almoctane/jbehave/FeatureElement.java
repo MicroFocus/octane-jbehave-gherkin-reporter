@@ -1,4 +1,4 @@
-package com.microfocus.adm.almoctane.jbehave.infra;
+package com.microfocus.adm.almoctane.jbehave;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by intract on 23/06/2016.
  */
-public class FeatureElement implements GherkinSerializer {
+class FeatureElement implements GherkinSerializer {
     private String name = "";
     private String tag = "";
     private String path = "";

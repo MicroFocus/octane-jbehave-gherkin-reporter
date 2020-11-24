@@ -1,8 +1,8 @@
-package com.microfocus.adm.almoctane.jbehave.infra;
+package com.microfocus.adm.almoctane.jbehave;
 
 import org.jbehave.core.failures.UUIDExceptionWrapper;
 
-public class ErrorHandler {
+class ErrorHandler {
 
     public static void error(String msg) throws UUIDExceptionWrapper {
         error(msg, null);

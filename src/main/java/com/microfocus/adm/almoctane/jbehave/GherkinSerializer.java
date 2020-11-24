@@ -1,9 +1,9 @@
-package com.microfocus.adm.almoctane.jbehave.infra;
+package com.microfocus.adm.almoctane.jbehave;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-public interface GherkinSerializer {
+interface GherkinSerializer {
     String FEATURE_TAG_NAME = "feature";
     String ROOT_TAG_NAME = "features";
     String SCENARIO_TAG_NAME = "scenario";
