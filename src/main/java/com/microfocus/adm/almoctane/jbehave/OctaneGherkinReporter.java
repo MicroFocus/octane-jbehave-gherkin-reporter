@@ -1,8 +1,8 @@
-package com.alm.octane;
+package com.microfocus.adm.almoctane.jbehave;
 
 
-import com.alm.octane.infra.TestTracker;
-import com.alm.octane.infra.Constants;
+import com.microfocus.adm.almoctane.jbehave.infra.TestTracker;
+import com.microfocus.adm.almoctane.jbehave.infra.Constants;
 import org.jbehave.core.model.Scenario;
 import org.jbehave.core.model.Story;
 import org.jbehave.core.reporters.NullStoryReporter;
@@ -10,7 +10,6 @@ import org.jbehave.core.steps.StepCollector;
 
 import java.nio.file.Path;
 import java.util.Map;
-
 
 public class OctaneGherkinReporter extends NullStoryReporter {
     private final ThreadLocal<TestTracker> testTrackerHolder = new ThreadLocal<>();

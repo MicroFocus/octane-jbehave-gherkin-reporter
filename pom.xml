@@ -8,7 +8,7 @@
         <jbehave.version>4.7</jbehave.version>
     </properties>
 
-    <groupId>com.alm.octane</groupId>
+    <groupId>com.microfocus.adm.almoctane.jbehave</groupId>
     <artifactId>octane-jbehave-gherkin-reporter</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>

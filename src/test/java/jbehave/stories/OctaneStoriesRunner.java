@@ -1,6 +1,6 @@
 package jbehave.stories;
 
-import com.alm.octane.OctaneGherkinReporter;
+import com.microfocus.adm.almoctane.jbehave.OctaneGherkinReporter;
 import jbehave.steps.*;
 import org.jbehave.core.Embeddable;
 import org.jbehave.core.configuration.Configuration;
@@ -66,10 +66,8 @@ public class OctaneStoriesRunner extends JUnitStories {
             "");
     }
 
-    // Here we specify the steps classes
     @Override
     public InjectableStepsFactory stepsFactory() {
-        // varargs, can have more that one steps classes
         return new InstanceStepsFactory(
             configuration(),
             new NameValidationSteps(),

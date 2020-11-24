@@ -1,4 +1,4 @@
-package com.alm.octane.infra;
+package com.microfocus.adm.almoctane.jbehave.infra;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

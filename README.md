@@ -17,7 +17,7 @@ ALM Octane JBehave Gherkin reporter enables uploading JBehave tests back into AL
 ```xml
 <dependencies>
     <dependency>
-         <groupId>com.hpe.alm.octane</groupId>
+         <groupId>com.microfocus.adm.almoctane.jbehave</groupId>
          <artifactId>octane-jbehave-gherkin-reporter</artifactId>
          <version>1.0.0</version>
     </dependency>

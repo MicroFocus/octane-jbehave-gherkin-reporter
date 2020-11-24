@@ -1,11 +1,7 @@
-package com.alm.octane.infra;
+package com.microfocus.adm.almoctane.jbehave.infra;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-
-import java.io.File;
-import java.net.URI;
-import java.net.URISyntaxException;
 
 public interface GherkinSerializer {
     String FEATURE_TAG_NAME = "feature";

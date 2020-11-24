@@ -1,4 +1,4 @@
-package com.alm.octane.infra;
+package com.microfocus.adm.almoctane.jbehave.infra;
 
 public class Constants {
 	public static final String errorPrefix = "<OctaneJBehaveGherkinReporter Error> ";
