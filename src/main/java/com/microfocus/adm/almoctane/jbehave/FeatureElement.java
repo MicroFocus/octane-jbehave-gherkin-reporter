@@ -29,9 +29,6 @@ import org.w3c.dom.Element;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by intract on 23/06/2016.
- */
 class FeatureElement implements GherkinSerializer {
     private String name = "";
     private String tag = "";

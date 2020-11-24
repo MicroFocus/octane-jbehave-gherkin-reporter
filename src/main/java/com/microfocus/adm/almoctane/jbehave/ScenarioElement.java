@@ -29,9 +29,7 @@ import org.w3c.dom.Element;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by intract on 23/06/2016.
- */
+
 class ScenarioElement implements GherkinSerializer {
     private final String name;
     private final List<StepElement> steps = new ArrayList<>();
