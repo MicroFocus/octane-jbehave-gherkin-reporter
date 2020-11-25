@@ -57,6 +57,12 @@ public class OctaneGherkinReporter extends NullStoryReporter {
         this.resultDir = resultDir;
     }
 
+    /**
+     * Creates an {@code OctaneGherkinReporter} object
+     *
+     * @param classLoader Your embedder class loader
+     * @throws Exception If the specified classLoader is null
+     */
     public OctaneGherkinReporter(ClassLoader classLoader) throws Exception {
         this(classLoader, null);
     }
@@ -124,7 +130,7 @@ public class OctaneGherkinReporter extends NullStoryReporter {
      */
     @Override
     public void pending(String step) {
-        testTrackerHolder.get().addStepToCurrentScenario(step, Constants.PENDING, "step not implemented");
+        testTrackerHolder.get().addStepToCurrentScenario(step, Constants.PENDING, Constants.UNIMPLEMENTED_STEP);
     }
 
     /**

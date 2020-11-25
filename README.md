@@ -11,8 +11,9 @@ ALM Octane JBehave Gherkin reporter enables uploading JBehave tests back into AL
 * You are using Java language and the JBehave library to develop Gherkin tests.
 * You are writing your tests in Gherkin syntax and use .feature files.
 
-## How to configure octane-jbehave-gherkin-reporter in your project:
+## How to configure octane-jbehave-gherkin-reporter in your project
 
+### Enable reporting to Octane
 1. Add a dependency in your pom file:
 ```xml
 <dependencies>
@@ -24,7 +25,7 @@ ALM Octane JBehave Gherkin reporter enables uploading JBehave tests back into AL
 </dependencies>
 ```
 
-2. Add the OctaneGherkinReporter to your running configuration as a reporter (using the `withReports` method of `StoryReporterBuilder` For example:
+2. Add the OctaneGherkinReporter to your running configuration as a reporter (using the `withReports` method of `StoryReporterBuilder`) For example:
 ```java
 public class OctaneStoriesRunner extends JUnitStories {
     private final Class<? extends Embeddable> embeddableClass = this.getClass();
@@ -45,8 +46,6 @@ public class OctaneStoriesRunner extends JUnitStories {
 OctaneGherkinReporter constructor accepts two input parameters:</br>
 &nbsp;&nbsp;&nbsp;&nbsp;1. classLoader - your embedder class loader</br>
 &nbsp;&nbsp;&nbsp;&nbsp;2. resultDir - (optional) a path to write the reports. If no path provided OctaneGherkinReporter will write the reports to `target/jbehave/octane`.</br>
-
-This configuration is enough to allow executing the test jobs with JBehave by a CI server and reporting the results to Octane.
 
 ### Enable executions with test runners
 In addition to running test jobs by the CI you can use Octane's Test Runners to run specific feature files.</br>

@@ -41,7 +41,7 @@ import java.time.Instant;
 import java.util.Map;
 
 class TestTracker {
-    private final ClassLoader embedder;
+    private final ClassLoader classLoader;
     private JbFeatureElement currentFeature;
     private ScenarioElement currentScenario;
     private String lastScenarioName;
@@ -49,8 +49,8 @@ class TestTracker {
     private final Path resultDir;
 
 
-    public TestTracker(ClassLoader embedder, Path resultDir) {
-        this.embedder = embedder;
+    public TestTracker(ClassLoader classLoader, Path resultDir) {
+        this.classLoader = classLoader;
         if (resultDir == null) {
             this.resultDir = Paths.get("target", "jbehave", "octane");
         } else {
@@ -60,7 +60,7 @@ class TestTracker {
 
     public void setCurrentFeature(Story story) {
         if (currentFeature == null) {
-            currentFeature = new JbFeatureElement(embedder, story);
+            currentFeature = new JbFeatureElement(classLoader, story);
         }
     }
 
@@ -92,6 +92,7 @@ class TestTracker {
     }
 
     public void addStepToCurrentScenario(String stepName, String status, String exceptionMessage) {
+        long elapsedTime = Instant.now().toEpochMilli() - stepStarted;
         String sanitizedStepName = stepName.replaceAll(Constants.JB_LEFT_PARAM_CHAR + "|" + Constants.JB_RIGHT_PARAM_CHAR, "");
         StepElement step = new StepElement(sanitizedStepName);
 
@@ -100,7 +101,6 @@ class TestTracker {
         }
 
         step.setStatus(status);
-        long elapsedTime = Instant.now().toEpochMilli() - stepStarted;
         step.setDuration(elapsedTime);
         currentScenario.addStep(step);
     }

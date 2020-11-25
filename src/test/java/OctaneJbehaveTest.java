@@ -87,19 +87,18 @@ public class OctaneJbehaveTest {
         try {
             runner.run();
         } catch (Exception ignored) {
-            System.out.println("catch");
         }
         validate(Collections.singletonList("step_failed.xml"));
     }
 
     @Test
     public void testMultiThreadedRun() throws FileNotFoundException {
-        JUnitStories multiThreadedRunner = new OctaneStoriesRunner(
+        JUnitStories runner = new OctaneStoriesRunner(
             null,
             Arrays.asList("features/name validation.feature", "features/number_addition.feature","features/number_reduction.feature"),
             3
         );
-        multiThreadedRunner.run();
+        runner.run();
         validate(Arrays.asList("name validation.xml","number_addition.xml", "number_reduction.xml"));
     }
 

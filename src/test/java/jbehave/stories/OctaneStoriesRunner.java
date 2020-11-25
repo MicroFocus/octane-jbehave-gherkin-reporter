@@ -78,7 +78,6 @@ public class OctaneStoriesRunner extends JUnitStories {
     @Override
     protected List<String> storyPaths() {
         String featuresProperty = System.getProperty("features"); //-Dfeatures
-        System.out.println(featuresProperty);
         if (featuresProperty != null) {
             featureFilesPaths = Arrays.asList(featuresProperty.split(","));
         }

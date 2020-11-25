@@ -13,7 +13,7 @@
                     <step name="Given step should fail" status="passed"/>
                     <step name="When step fails" status="failed">
                         <error_message><![CDATA[java.lang.AssertionError: expected:<2> but was:<5000>
-	at jbehave.steps.StepFailedSteps.stepFails(StepFailedSteps.java:16)
+	at jbehave.steps.StepFailedSteps.stepFails(StepFailedSteps.java:38)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

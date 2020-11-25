@@ -37,6 +37,8 @@ class Constants {
     public static final String PENDING = "pending";
     public static final String SKIPPED = "skipped";
 
+    public static final String UNIMPLEMENTED_STEP = "step not implemented";
+
     public static final String JB_LEFT_PARAM_CHAR = "\uFF5F";
     public static final String JB_RIGHT_PARAM_CHAR = "\uFF60";
 
