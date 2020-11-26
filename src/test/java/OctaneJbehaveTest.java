@@ -21,6 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+
 import jbehave.stories.OctaneStoriesRunner;
 import org.jbehave.core.junit.JUnitStories;
 import org.junit.Assert;
@@ -92,14 +93,58 @@ public class OctaneJbehaveTest {
     }
 
     @Test
+    public void testStepFailedOnScenarioOutline() throws FileNotFoundException {
+        JUnitStories runner = new OctaneStoriesRunner(
+            null,
+            Collections.singletonList("features/failed_step_on_scenario_outline.feature")
+        );
+        try {
+            runner.run();
+        } catch (Exception ignored) {
+        }
+        validate(Collections.singletonList("failed_step_on_scenario_outline.xml"));
+    }
+
+    @Test
+    public void testStepFailedOnBackground() throws FileNotFoundException {
+        JUnitStories runner = new OctaneStoriesRunner(
+            null,
+            Collections.singletonList("features/failed_step_on_background.feature")
+        );
+        try {
+            runner.run();
+        } catch (Exception ignored) {
+        }
+        validate(Collections.singletonList("failed_step_on_background.xml"));
+    }
+
+    @Test
     public void testMultiThreadedRun() throws FileNotFoundException {
         JUnitStories runner = new OctaneStoriesRunner(
             null,
-            Arrays.asList("features/name validation.feature", "features/number_addition.feature","features/number_reduction.feature"),
-            3
+            Arrays.asList(
+                "features/name validation.feature",
+                "features/number_addition.feature",
+                "features/number_reduction.feature",
+                "features/threaded1.feature",
+                "features/threaded2.feature",
+                "features/threaded3.feature",
+                "features/threaded4.feature"
+            ),
+            2
         );
         runner.run();
-        validate(Arrays.asList("name validation.xml","number_addition.xml", "number_reduction.xml"));
+        validate(
+            Arrays.asList(
+                "name validation.xml",
+                "number_addition.xml",
+                "number_reduction.xml",
+                "threaded1.xml",
+                "threaded2.xml",
+                "threaded3.xml",
+                "threaded4.xml"
+            )
+        );
     }
 
     private void validate(List<String> resultFileNames) throws FileNotFoundException {

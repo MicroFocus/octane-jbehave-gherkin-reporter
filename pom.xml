@@ -29,6 +29,12 @@
         </developer>
     </developers>
 
+    <scm>
+        <connection>scm:git:git@github.com:MicroFocus/octane-jbehave-gherkin-reporter.git</connection>
+        <developerConnection>scm:git:git@github.com:MicroFocus/octane-jbehave-gherkin-reporter.git</developerConnection>
+        <url>git@github.com:MicroFocus/octane-jbehave-gherkin-reporter.git</url>
+    </scm>
+
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>

@@ -96,7 +96,8 @@ public class OctaneStoriesRunner extends JUnitStories {
             new NotImplementedSteps(),
             new NumberAdditionSteps(),
             new NumberReductionSteps(),
-            new StepFailedSteps()
+            new StepFailedSteps(),
+            new ThreadedRunSteps()
         );
     }
 

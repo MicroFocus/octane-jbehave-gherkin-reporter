@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features version="1">
+    <feature name="threaded 2" path="features/threaded2.feature" tag="">
+        <file><![CDATA[Feature: threaded 2
+
+    Scenario: run with thread
+        Given multiple threads
+        When running a thread
+        Then the feature should run properly
+]]></file>
+        <scenarios>
+            <scenario name="run with thread">
+                <steps>
+                    <step name="Given multiple threads" status="passed"/>
+                    <step name="When running a thread" status="passed"/>
+                    <step name="Then the feature should run properly" status="passed"/>
+                </steps>
+            </scenario>
+        </scenarios>
+    </feature>
+</features>
